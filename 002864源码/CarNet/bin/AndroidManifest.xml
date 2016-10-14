@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cumt.carnet"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="21" />
+	<!-- 闪光灯权限 -->
+	<uses-feature android:name="android.hardware.camera" />
+	<uses-feature android:name="android.hardware.camera.autofocus" />
+	<uses-permission android:name="android.permission.FLASHLIGHT" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<!-- 分隔线 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+	<!-- 这个权限用于进行网络定位-->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<!-- 这个权限用于访问GPS定位-->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>			
+	<!-- SD卡读取权限，用户写入离线定位数据-->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	<!-- 申明权限 操作SD卡 -->  
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 申请拍照权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />  
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <!--蓝牙权限  -->
+	<uses-permission android:name="android.permission.BLUETOOTH"/>
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+	<!-- 导航 -->
+	<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />  
+	<uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" /> 
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />  
+	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.ACCESS_GPS" /> 
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />  
+	<!-- 来电消音 -->  
+	<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />  
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />  
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />  
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:name="com.app.CarnetApplication"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <meta-data  
+        	android:name="com.baidu.lbsapi.API_KEY"  
+        	android:value="d1NzaT9SPBXTBGpA3FfOiNxCvoO3chTc" /> 
+        <service 
+            android:name="com.baidu.location.f" 
+            android:enabled="true" 
+            android:process=":remote">
+		</service>	 
+		<service android:name="com.service.MusicService"></service>
+		<service android:name="com.cheshouye.api.client.WeizhangIntentService"></service>
+        <activity android:name="com.cumt.carnet.view.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity android:name="com.cumt.drawerlayout.setting.SettingActivity"></activity>
+        <activity android:name="com.cumt.register.view.RegisterActivity"></activity>
+        <activity android:name="com.zxing.activity.CaptureActivity"></activity>  
+        <activity android:name="com.cumt.zxing.view.ZcodeActivity"></activity>
+        <activity android:name="com.cumt.book.view.BookActivity"></activity>
+        <activity android:name="com.cumt.test.BNDemoGuideActivity"></activity>
+        <activity android:name="com.cumt.test.BNDemoMainActivity"></activity>
+        <activity android:name="com.cumt.drawerlayout.setting.ChoisemusicActivity"></activity>
+        <activity android:name="com.cumt.drawerlayout.music.MuiscManageActivity"></activity>
+        <activity android:name="com.cumt.login.view.LoginActivity"
+             android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.cumt.test.TestActivity"></activity>
+        <activity android:name="com.cumt.drawerlayout.carinfo.CarInfoActivity"></activity>
+        <activity android:name="com.cumt.drawerlayout.carinfo.activity.SearchActivity"></activity>
+        <activity android:name="com.cumt.drawerlayout.carinfo.activity.CityList"></activity>
+        <activity android:name="com.cumt.drawerlayout.carinfo.activity.ProvinceList"></activity>
+        <activity android:name="com.cumt.drawerlayout.carinfo.activity.ShortNameList"></activity>
+        <activity android:name="com.cumt.drawerlayout.carinfo.activity.WeizhangResult"></activity>
+        <activity android:name="com.cumt.drawerlayout.manage.activity.BookManageActivity"></activity>
+        <activity android:name="com.cumt.drawerlayout.music.MusicInfoActivity"></activity>
+        <activity android:name="com.cumt.drawerlayout.personal.UserPersonalActivity"></activity>
+        <activity android:name="com.cumt.drawerlayout.manage.activity.BookInfoActivity"></activity>
+        <activity android:name="com.cumt.drawerlayout.setting.ChangePassActivity"></activity>
+        <activity android:name="com.cumt.drawerlayout.personal.UserInfoSettingActivity"></activity>
+        <activity android:name="com.cumt.drawerlayout.setting.FeedBackActivity"></activity>
+        <!--  com.cumt.login.view.LoginActivity -->
+        <activity
+            android:name="com.cumt.splash.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

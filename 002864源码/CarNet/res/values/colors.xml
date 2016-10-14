@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green">#00FF00</color>
+    <color name="thumbColor">#66aaaaaa</color>
+    <color name="transparent_background_button">#11000000</color>
+    <color name="transparent_background">#ffffff</color>
+    <color name="bg_grey">#e6e6e6</color>
+    <color name="skyblue">#2196F3</color>
+    <color name="skyblue800">#1565C0</color>
+    <color name="white">#fff</color>
+    <color name="textcolor_grey">#666</color>
+    <color name="csy_bg_body">#ffe9e9e9</color> 
+    <color name="csy_row_on">#fff0f0f0</color> 
+    <color name="csy_border">#ffd0d0d0</color>
+	<color name="csy_green">#ff3caa0f</color>	
+	<color name="csy_green_on">#ff28780a</color>
+	<color name="csy_blue">#ff0a7dd2</color>
+	<color name="csy_blue_on">#ff0a64aa</color>	
+    <color name="csy_label">#ff969696</color>
+    <color name="csy_text">#ff555555</color>
+    <color name="csy_hint">#ffc6c6c6</color>  
+    <color name="background_tab_pressed">#6633B5E5</color>    
+    <color name="pink">#E91E63</color>
+    <color name="orange">#ff9800</color>
+    <color name="deep_blue">#12127D</color>
+        
+</resources>

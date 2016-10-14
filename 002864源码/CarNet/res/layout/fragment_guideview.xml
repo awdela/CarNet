@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="#e6e6e6"
+    android:id="@+id/guidefragment_liner"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include_guide"
+        layout="@layout/title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#56abe4"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="0.96"
+            android:background="#56abe4"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/input_position"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="15dp"
+                android:background="#60ffffff"
+                android:ems="10"
+                android:hint="请输入起始地点"
+                android:paddingLeft="20px"
+                android:textColorHint="#d9f1ff"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/input_target"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:background="#60ffffff"
+                android:hint="请输入目标地点"
+                android:paddingLeft="20px"
+                android:textColorHint="#d9f1ff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <ImageButton
+                android:id="@+id/btnChange"
+                android:layout_width="45dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="#56abe4"
+                android:src="@drawable/transfer" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="0dp"
+        android:background="#56abe4"
+        android:orientation="horizontal" >
+
+        <com.cumt.view.ButtonFlat
+            android:id="@+id/btnGuide"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="64dp"
+            android:text="导 航"
+            android:background="#0ff"
+            android:textSize="16sp" />
+
+        <com.cumt.view.ButtonFlat
+            android:id="@+id/btnCancel"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="#0ff"
+            android:layout_gravity="right|bottom"
+            android:layout_marginLeft="80dp"
+            android:text="取 消"
+            android:textSize="16sp" />
+    </LinearLayout>
+    
+    <ListView 
+        android:background="@drawable/guideview_bg"
+        android:layout_marginTop="10sp"
+        android:id="@+id/list_position"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>

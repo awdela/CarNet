@@ -1,0 +1,77 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/baiduMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <FrameLayout  
+        			android:id="@+id/content"  
+       			 	android:layout_width="fill_parent"  
+        			android:layout_height="fill_parent"  
+        			 />  
+            </LinearLayout>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/bottombar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/bottombar_view" />
+    </LinearLayout>
+    <!-- The navigation view -->
+
+    <RelativeLayout
+        android:id="@+id/left"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@android:color/white" >
+
+        <LinearLayout
+            android:id="@+id/left_image"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/background"
+            android:orientation="horizontal" >
+
+            <com.cumt.view.RoundImageView
+                android:id="@+id/touxiang"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:src="@drawable/head_moren" />
+        </LinearLayout>
+        <!-- - android:dividerHeight="0dp"设置ListView分隔线为隐藏 -->
+
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="260dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/left_image"
+            android:layout_gravity="start"
+            android:background="#ffffff"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" >
+        </ListView>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
